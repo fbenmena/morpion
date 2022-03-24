@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Morpion</title>
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="morpionStyle.css" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="morpionScript.js"></script>
+  </head>
+  <body>
+    <div id="titre" class="container">
+      <div ><font size="+6">Morpion</font></div>
+      <div>
+        <button type="button" class="btn btn-primary">player 1 <span id="score1" class="badge">0</span></button>
+        <button type="button" class="btn btn-success">player 2 <span id="score2" class="badge">0</span></button>
+        <button id="rejouer" type="button" class="btn btn-primary" onclick="location.reload();">Rejouer</button>
+      </div>
+      <div class="jeu">
+        <table id="center">
+          <tbody>
+            <tr>
+              <td class="carre" id="C00" onclick="cocher('C00');"></td>
+              <td class="carre" id="C01" onclick="cocher('C01');"></td>
+              <td class="carre" id="C02" onclick="cocher('C02');"></td>
+            </tr>
+            <tr>
+              <td class="carre" id="C10" onclick="cocher('C10');"></td>
+              <td class="carre" id="C11" onclick="cocher('C11');"></td>
+              <td class="carre" id="C12" onclick="cocher('C12');"></td>
+            </tr>
+            <tr>
+              <td class="carre" id="C20" onclick="cocher('C20');"></td>
+              <td class="carre" id="C21" onclick="cocher('C21');"></td>
+              <td class="carre" id="C22" onclick="cocher('C22');"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="info" class="alert alert-info"></div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div id="messageModal" class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
